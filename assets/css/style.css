@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Ranga&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+body.home {
+    
+    background: linear-gradient(to bottom, #EBC49F, #fdfffc); /* Adjust the direction and the second color as needed */
+}
+h1{
+	font-family: 'Roboto Mono', monospace;
+}
+h5{
+	font-family: 'Raleway', sans-serif;
+}
+h1.nama{
+    font-family: 'Sigmar One', sans-serif;
+}
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        justify-content: center; /* Mengatur konten dalam navbar untuk ditengahkan secara horizontal */
+        text-align: center; /* Mengatur teks dalam navbar untuk ditengahkan secara horizontal */
+        width: 100%; /* Mengatur lebar navbar menjadi 100% saat viewport dibawah 991.98px */
+    }
+}
+
+/* Untuk gambar logo di layar kecil (mobile) */
+@media (max-width: 576px) {
+    .logo-img {
+        height: 35px !important; /* Mengatur ukuran gambar menjadi 35px pada layar kecil */
+    }
+}
+
+/* Untuk gambar logo di layar besar (desktop) */
+@media (min-width: 577px) {
+    .logo-img {
+        height: 50px !important; /* Mengatur ukuran gambar menjadi 45px pada layar besar */
+    }
+}
+
+p.quote{
+    font-family: "Ranga", cursive;
+}
+.navbar-nav .nav-link {
+    position: relative; /* Memastikan posisi yang tepat dari garis bawah pada tautan navbar */
+    
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px; /* Mengatur jarak garis bawah dari teks */
+    width: 100%; /* Mengatur lebar garis bawah sesuai dengan lebar tautan */
+    height: 2px; /* Mengatur ketebalan garis bawah */
+    background-color: transparent; /* Mengatur warna awal garis bawah menjadi transparan */
+    transition: background-color 0.3s ease; /* Menambahkan efek transisi saat perubahan warna garis bawah */
+}
+
+.navbar-nav .nav-link:hover::after {
+    background-color: #d37676; /* Mengubah warna garis bawah pada tautan saat dihover */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #d37676; /* Mengubah warna teks tautan saat dihover */
+}
+
+.text-center-span {
+    display: block;
+    text-align: center;
+    max-width: 400px; /* Mengatur lebar maksimum blok teks menjadi 400px */
+    margin: 0 auto; /* Membuat blok teks menjadi terpusat secara horizontal */
+}
+
+.custom-hr {
+    border: none; /* Menghilangkan border */
+    text-align: center; /* Mengatur teks menjadi terpusat secara horizontal */
+    margin: 20px 0; /* Mengatur jarak atas dan bawah */
+}
+
+.custom-hr::before {
+    content: '● ● ●'; /* Menampilkan titik-titik sebagai garis pemisah */
+    font-size: 24px; /* Mengatur ukuran font */
+    color: #B0C5A4; /* Mengatur warna garis pemisah */
+}
+
+.timeline-steps {
+    display: flex; /* Mengatur kontainer langkah-langkah timeline menjadi flex */
+    justify-content: center; /* Mengatur langkah-langkah timeline untuk ditengahkan secara horizontal */
+    flex-wrap: wrap; /* Mengatur wrap elemen jika tidak cukup ruang */
+}
+
+.timeline-steps .timeline-step {
+    align-items: center; /* Mengatur item timeline untuk ditengahkan secara vertikal */
+    display: flex; /* Mengatur item timeline menjadi flex */
+    flex-direction: column; /* Mengatur arah tata letak item timeline menjadi vertikal */
+    position: relative; /* Memastikan posisi yang tepat untuk item timeline */
+    margin: 1rem; /* Mengatur jarak antara item timeline */
+}
+
+@media (min-width:768px) {
+    .timeline-steps .timeline-step:not(:last-child):after {
+        content: ""; /* Menambahkan content kosong */
+        display: block; /* Menampilkan elemen sebagai block */
+        border-top: .25rem dotted #D37676; /* Mengatur garis putus-putus di antara langkah-langkah timeline */
+        width: 3.46rem; /* Mengatur panjang garis putus-putus */
+        position: absolute; /* Mengatur posisi absolut */
+        left: 7.5rem; /* Mengatur posisi horizontal */
+        top: .3125rem; /* Mengatur posisi vertikal */
+    }
+
+    .timeline-steps .timeline-step:not(:first-child):before {
+        content: ""; /* Menambahkan content kosong */
+        display: block; /* Menampilkan elemen sebagai block */
+        border-top: .25rem dotted #D37676; /* Mengatur garis putus-putus di antara langkah-langkah timeline */
+        width: 3.8125rem; /* Mengatur panjang garis putus-putus */
+        position: absolute; /* Mengatur posisi absolut */
+        right: 7.5rem; /* Mengatur posisi horizontal */
+        top: .3125rem; /* Mengatur posisi vertikal */
+    }
+}
+
+.timeline-steps .timeline-content {
+    width: 10rem; /* Mengatur lebar konten pada setiap langkah timeline */
+    text-align: center; /* Mengatur teks pada konten untuk ditengahkan secara horizontal */
+}
+
+.timeline-steps .timeline-content .inner-circle {
+    border-radius: 1.5rem; /* Memberikan radius sudut untuk lingkaran dalam */
+    height: 1rem; /* Mengatur tinggi lingkaran dalam */
+    width: 1rem; /* Mengatur lebar lingkaran dalam */
+    display: inline-flex; /* Mengatur konten agar terletak dalam satu baris */
+    align-items: center; /* Mengatur konten untuk ditengahkan secara vertikal */
+    justify-content: center; /* Mengatur konten untuk ditengahkan secara horizontal */
+    background-color: #D37676; /* Mengatur warna latar belakang lingkaran dalam */
+}
+
+.timeline-steps .timeline-content .inner-circle:before {
+    content: ""; /* Menambahkan content kosong */
+    background-color: #D37676; /* Mengatur warna latar belakang lingkaran sebelumnya */
+    display: inline-block; /* Mengatur konten agar terletak dalam satu baris */
+    height: 3rem; /* Mengatur tinggi lingkaran sebelumnya */
+    width: 3rem; /* Mengatur lebar lingkaran sebelumnya */
+    min-width: 3rem; /* Mengatur lebar minimum lingkaran sebelumnya */
+    border-radius: 6.25rem; /* Memberikan radius sudut untuk lingkaran sebelumnya */
+    opacity: .5; /* Mengatur tingkat kejernihan lingkaran sebelumnya */
+}
+.img-zoom {
+    transition: transform 0.5s;
+}
+.img-zoom:hover {
+    transform: scale(1.1);
+}
+.btn-custom:hover {
+    background-color: #b0c5a4 !important;
+    border-color: #b0c5a4 !important;
+}
